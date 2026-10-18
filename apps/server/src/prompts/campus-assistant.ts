@@ -60,7 +60,7 @@ ${loadKnowledge()}`,
 };
 
 // 当前生效的提示词版本，回滚或切换只需改这一处
-export const ACTIVE_PROMPT_VERSION: CampusAssistantPromptVersion = "v2";
+export const ACTIVE_PROMPT_VERSION: CampusAssistantPromptVersion = "v1";
 /**
  * 获取指定版本的校园助手提示词配置
  *

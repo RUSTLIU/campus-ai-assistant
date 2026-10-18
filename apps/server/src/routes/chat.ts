@@ -19,6 +19,7 @@ function createErrorResponse(message: string): ChatResponse {
 
 //3学生任务：在这里实现聊天接口。
 router.post("/api/chat", async (request, response) => {
+    // 路由输入检查
     const body = request.body as Partial<ChatRequest>;
     const messages = Array.isArray(body.messages) ? body.messages : [];
     const lastMessage = messages.at(-1);
@@ -34,6 +35,7 @@ router.post("/api/chat", async (request, response) => {
     }
     // 关键知识点：ChatResponse约束后端响应结构。
     try {
+        // 调用 buildChatMessages，内部会将系统提示词（System Prompt）与用户的对话历史合并组装
         const modelMessages = buildChatMessages(messages);
         const assistantResponse = await chatWithConfiguredModel(modelMessages);
         const successResponse: ChatResponse = {
