@@ -1,5 +1,6 @@
 # 校园 AI 助手：课程起始项目
 
+<<<<<<< HEAD
 这是《AI 大前端项目开发》的贯穿式教学案例。项目采用 pnpm Monorepo，包含 Vue 3 前端、Express 后端和前后端共享的 TypeScript 类型包。
 
 第 1 讲的目标是完成类型安全的全栈模拟聊天框架。后端暂不调用真实大模型；后续课程将在同一项目上逐步加入大模型 API、流式响应、多轮对话、RAG、Agent 和部署功能。
@@ -11,6 +12,9 @@
 - 通过 workspace 包实现前后端类型共享；
 - 理解 Vue、Pinia、前端 API 模块和 Express 的职责；
 - 完成一次完整的前端请求、后端处理和页面渲染流程。
+=======
+这是《AI 大前端项目开发》第 1 讲使用的最小工程骨架，只完成项目配置，不提供聊天功能答案。
+>>>>>>> 6eaf194d7f4e5826909f0957c81b2e5d6c9b8b39
 
 ## 项目结构
 
@@ -19,10 +23,13 @@ campus-ai-assistant/
 ├─ apps/
 │  ├─ web/                  # Vue 3 前端
 │  │  ├─ src/
+<<<<<<< HEAD
 │  │  │  ├─ api/chat.ts     # 封装聊天请求
 │  │  │  ├─ components/
 │  │  │  │  └─ MessageItem.vue
 │  │  │  ├─ stores/chat.ts  # Pinia 聊天状态
+=======
+>>>>>>> 6eaf194d7f4e5826909f0957c81b2e5d6c9b8b39
 │  │  │  ├─ App.vue
 │  │  │  ├─ env.d.ts
 │  │  │  └─ main.ts
@@ -60,7 +67,11 @@ campus-ai-assistant/
 - Vite `/api` 代理；
 - Express `/api/health` 健康检查。
 
+<<<<<<< HEAD
 ## 第 1 讲实践内容
+=======
+## 学生需要完成
+>>>>>>> 6eaf194d7f4e5826909f0957c81b2e5d6c9b8b39
 
 - 定义 `ChatMessage`、`ApiResponse<T>` 等共享类型；
 - 实现 `POST /api/chat`；
@@ -76,7 +87,11 @@ campus-ai-assistant/
 ## 获取与运行
 
 ```powershell
+<<<<<<< HEAD
 git clone https://gitee.com/jihongwang/campus-ai-assistant.git
+=======
+git clone <教师提供的仓库地址>
+>>>>>>> 6eaf194d7f4e5826909f0957c81b2e5d6c9b8b39
 cd campus-ai-assistant
 pnpm install
 pnpm dev
@@ -89,6 +104,7 @@ pnpm dev
 
 页面必须通过 HTTP 地址打开，不能双击 HTML 文件使用 `file://`。
 
+<<<<<<< HEAD
 ## 全栈调用链
 
 ```text
@@ -150,6 +166,8 @@ Content-Type: application/json
 }
 ```
 
+=======
+>>>>>>> 6eaf194d7f4e5826909f0957c81b2e5d6c9b8b39
 ## 常用命令
 
 ```powershell
@@ -158,6 +176,7 @@ pnpm check        # ESLint + 类型检查 + 构建
 pnpm format       # 格式化代码
 ```
 
+<<<<<<< HEAD
 ## 开发约定
 
 - 共享类型只定义在 `packages/shared-types` 中；
@@ -204,3 +223,25 @@ git push origin master
 ```
 
 后续实验继续迭代本项目，不重新创建技术框架。
+=======
+提交信息示例：
+
+```powershell
+git add	把修改加入暂存区
+git commit	在本地生成一次版本记录
+git commit -m "feat: 完成消息组件"
+git push	把本地提交上传到Gitee
+git pull	把远程更新同步到本地
+git clone	第一次把完整远程仓库下载到本地
+```
+
+| 类型 | 用途 |
+|---|---|
+| `feat` | 新增功能 |
+| `fix` | 修复错误 |
+| `docs` | 修改文档 |
+| `refactor` | 重构或精简代码 |
+| `style` | 格式调整 |
+| `chore` | 工程配置调整 |
+| `test` | 测试相关 |
+>>>>>>> 6eaf194d7f4e5826909f0957c81b2e5d6c9b8b39
